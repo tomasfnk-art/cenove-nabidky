@@ -1,0 +1,446 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T00:26:57.523Z",
+  "title": "Design System: Cenové nabídky",
+  "extensions": {
+    "colorMeta": {
+      "dark-bg": {
+        "role": "neutral",
+        "displayName": "Dark Plum canvas",
+        "tonalRamp": [
+          "oklch(15.00% 0.02535 298.94)",
+          "oklch(26.43% 0.02535 298.94)",
+          "oklch(37.86% 0.02535 298.94)",
+          "oklch(49.29% 0.02535 298.94)",
+          "oklch(60.71% 0.02535 298.94)",
+          "oklch(72.14% 0.02535 298.94)",
+          "oklch(83.57% 0.02535 298.94)",
+          "oklch(95.00% 0.02535 298.94)"
+        ]
+      },
+      "dark-fg": {
+        "role": "neutral",
+        "displayName": "Dark Plum ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.02215 302.94)",
+          "oklch(26.43% 0.02215 302.94)",
+          "oklch(37.86% 0.02215 302.94)",
+          "oklch(49.29% 0.02215 302.94)",
+          "oklch(60.71% 0.02215 302.94)",
+          "oklch(72.14% 0.02215 302.94)",
+          "oklch(83.57% 0.02215 302.94)",
+          "oklch(95.00% 0.02215 302.94)"
+        ]
+      },
+      "dark-card": {
+        "role": "neutral",
+        "displayName": "Dark Quiet panel",
+        "tonalRamp": [
+          "oklch(15.00% 0.03385 299.75)",
+          "oklch(26.43% 0.03385 299.75)",
+          "oklch(37.86% 0.03385 299.75)",
+          "oklch(49.29% 0.03385 299.75)",
+          "oklch(60.71% 0.03385 299.75)",
+          "oklch(72.14% 0.03385 299.75)",
+          "oklch(83.57% 0.03385 299.75)",
+          "oklch(95.00% 0.03385 299.75)"
+        ]
+      },
+      "dark-field": {
+        "role": "neutral",
+        "displayName": "Dark Inset field",
+        "tonalRamp": [
+          "oklch(15.00% 0.04199 300.13)",
+          "oklch(26.43% 0.04199 300.13)",
+          "oklch(37.86% 0.04199 300.13)",
+          "oklch(49.29% 0.04199 300.13)",
+          "oklch(60.71% 0.04199 300.13)",
+          "oklch(72.14% 0.04199 300.13)",
+          "oklch(83.57% 0.04199 300.13)",
+          "oklch(95.00% 0.04199 300.13)"
+        ]
+      },
+      "dark-border": {
+        "role": "neutral",
+        "displayName": "Dark Soft divider",
+        "tonalRamp": [
+          "oklch(15.00% 0.05019 301.79)",
+          "oklch(26.43% 0.05019 301.79)",
+          "oklch(37.86% 0.05019 301.79)",
+          "oklch(49.29% 0.05019 301.79)",
+          "oklch(60.71% 0.05019 301.79)",
+          "oklch(72.14% 0.05019 301.79)",
+          "oklch(83.57% 0.05019 301.79)",
+          "oklch(95.00% 0.05019 301.79)"
+        ]
+      },
+      "dark-action": {
+        "role": "primary",
+        "displayName": "Dark Violet action",
+        "tonalRamp": [
+          "oklch(15.00% 0.24051 286.48)",
+          "oklch(26.43% 0.24051 286.48)",
+          "oklch(37.86% 0.24051 286.48)",
+          "oklch(49.29% 0.24051 286.48)",
+          "oklch(60.71% 0.24051 286.48)",
+          "oklch(72.14% 0.24051 286.48)",
+          "oklch(83.57% 0.24051 286.48)",
+          "oklch(95.00% 0.24051 286.48)"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Dark Muted lavender",
+        "tonalRamp": [
+          "oklch(15.00% 0.05029 305.22)",
+          "oklch(26.43% 0.05029 305.22)",
+          "oklch(37.86% 0.05029 305.22)",
+          "oklch(49.29% 0.05029 305.22)",
+          "oklch(60.71% 0.05029 305.22)",
+          "oklch(72.14% 0.05029 305.22)",
+          "oklch(83.57% 0.05029 305.22)",
+          "oklch(95.00% 0.05029 305.22)"
+        ]
+      },
+      "dark-total": {
+        "role": "secondary",
+        "displayName": "Dark Pink total",
+        "tonalRamp": [
+          "oklch(15.00% 0.21246 332.96)",
+          "oklch(26.43% 0.21246 332.96)",
+          "oklch(37.86% 0.21246 332.96)",
+          "oklch(49.29% 0.21246 332.96)",
+          "oklch(60.71% 0.21246 332.96)",
+          "oklch(72.14% 0.21246 332.96)",
+          "oklch(83.57% 0.21246 332.96)",
+          "oklch(95.00% 0.21246 332.96)"
+        ]
+      },
+      "light-bg": {
+        "role": "neutral",
+        "displayName": "Light Plum canvas",
+        "tonalRamp": [
+          "oklch(15.00% 0.01105 303.11)",
+          "oklch(26.43% 0.01105 303.11)",
+          "oklch(37.86% 0.01105 303.11)",
+          "oklch(49.29% 0.01105 303.11)",
+          "oklch(60.71% 0.01105 303.11)",
+          "oklch(72.14% 0.01105 303.11)",
+          "oklch(83.57% 0.01105 303.11)",
+          "oklch(95.00% 0.01105 303.11)"
+        ]
+      },
+      "light-fg": {
+        "role": "neutral",
+        "displayName": "Light Plum ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.04517 303.05)",
+          "oklch(26.43% 0.04517 303.05)",
+          "oklch(37.86% 0.04517 303.05)",
+          "oklch(49.29% 0.04517 303.05)",
+          "oklch(60.71% 0.04517 303.05)",
+          "oklch(72.14% 0.04517 303.05)",
+          "oklch(83.57% 0.04517 303.05)",
+          "oklch(95.00% 0.04517 303.05)"
+        ]
+      },
+      "light-card": {
+        "role": "neutral",
+        "displayName": "Light Quiet panel",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 89.88)",
+          "oklch(26.43% 0.00000 89.88)",
+          "oklch(37.86% 0.00000 89.88)",
+          "oklch(49.29% 0.00000 89.88)",
+          "oklch(60.71% 0.00000 89.88)",
+          "oklch(72.14% 0.00000 89.88)",
+          "oklch(83.57% 0.00000 89.88)",
+          "oklch(95.00% 0.00000 89.88)"
+        ]
+      },
+      "light-field": {
+        "role": "neutral",
+        "displayName": "Light Inset field",
+        "tonalRamp": [
+          "oklch(15.00% 0.00977 305.41)",
+          "oklch(26.43% 0.00977 305.41)",
+          "oklch(37.86% 0.00977 305.41)",
+          "oklch(49.29% 0.00977 305.41)",
+          "oklch(60.71% 0.00977 305.41)",
+          "oklch(72.14% 0.00977 305.41)",
+          "oklch(83.57% 0.00977 305.41)",
+          "oklch(95.00% 0.00977 305.41)"
+        ]
+      },
+      "light-border": {
+        "role": "neutral",
+        "displayName": "Light Soft divider",
+        "tonalRamp": [
+          "oklch(15.00% 0.02874 306.01)",
+          "oklch(26.43% 0.02874 306.01)",
+          "oklch(37.86% 0.02874 306.01)",
+          "oklch(49.29% 0.02874 306.01)",
+          "oklch(60.71% 0.02874 306.01)",
+          "oklch(72.14% 0.02874 306.01)",
+          "oklch(83.57% 0.02874 306.01)",
+          "oklch(95.00% 0.02874 306.01)"
+        ]
+      },
+      "light-action": {
+        "role": "primary",
+        "displayName": "Light Violet action",
+        "tonalRamp": [
+          "oklch(15.00% 0.23844 284.91)",
+          "oklch(26.43% 0.23844 284.91)",
+          "oklch(37.86% 0.23844 284.91)",
+          "oklch(49.29% 0.23844 284.91)",
+          "oklch(60.71% 0.23844 284.91)",
+          "oklch(72.14% 0.23844 284.91)",
+          "oklch(83.57% 0.23844 284.91)",
+          "oklch(95.00% 0.23844 284.91)"
+        ]
+      },
+      "light-muted": {
+        "role": "neutral",
+        "displayName": "Light Muted lavender",
+        "tonalRamp": [
+          "oklch(15.00% 0.04993 305.87)",
+          "oklch(26.43% 0.04993 305.87)",
+          "oklch(37.86% 0.04993 305.87)",
+          "oklch(49.29% 0.04993 305.87)",
+          "oklch(60.71% 0.04993 305.87)",
+          "oklch(72.14% 0.04993 305.87)",
+          "oklch(83.57% 0.04993 305.87)",
+          "oklch(95.00% 0.04993 305.87)"
+        ]
+      },
+      "light-total": {
+        "role": "secondary",
+        "displayName": "Light Pink total",
+        "tonalRamp": [
+          "oklch(15.00% 0.20638 339.92)",
+          "oklch(26.43% 0.20638 339.92)",
+          "oklch(37.86% 0.20638 339.92)",
+          "oklch(49.29% 0.20638 339.92)",
+          "oklch(60.71% 0.20638 339.92)",
+          "oklch(72.14% 0.20638 339.92)",
+          "oklch(83.57% 0.20638 339.92)",
+          "oklch(95.00% 0.20638 339.92)"
+        ]
+      },
+      "print-fg": {
+        "role": "neutral",
+        "displayName": "Print fg",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 89.88)",
+          "oklch(26.43% 0.00000 89.88)",
+          "oklch(37.86% 0.00000 89.88)",
+          "oklch(49.29% 0.00000 89.88)",
+          "oklch(60.71% 0.00000 89.88)",
+          "oklch(72.14% 0.00000 89.88)",
+          "oklch(83.57% 0.00000 89.88)",
+          "oklch(95.00% 0.00000 89.88)"
+        ]
+      },
+      "print-muted": {
+        "role": "neutral",
+        "displayName": "Print muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 89.88)",
+          "oklch(26.43% 0.00000 89.88)",
+          "oklch(37.86% 0.00000 89.88)",
+          "oklch(49.29% 0.00000 89.88)",
+          "oklch(60.71% 0.00000 89.88)",
+          "oklch(72.14% 0.00000 89.88)",
+          "oklch(83.57% 0.00000 89.88)",
+          "oklch(95.00% 0.00000 89.88)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Editor headline",
+        "purpose": "Editor screens; 26px mobile, with a 36px login variant."
+      },
+      "title": {
+        "displayName": "Panel title",
+        "purpose": "Panel and category headings; category headings become 16px on mobile."
+      },
+      "body": {
+        "displayName": "System body",
+        "purpose": "Base UI text."
+      },
+      "label": {
+        "displayName": "Supporting label",
+        "purpose": "Brand and status text; process column labels use 11px desktop and 10px mobile."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Form controls; semibold buttons; mobile process controls use 13px."
+      },
+      "total": {
+        "displayName": "Prominent total",
+        "purpose": "Large quotation amount with tabular numerals."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "control-state",
+        "value": "border-color .16s ease, background .16s ease",
+        "purpose": "Existing button and input state transitions."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1000px",
+        "query": "(max-width:1000px)"
+      },
+      {
+        "name": "mobile",
+        "value": "719px",
+        "query": "(max-width:719px)"
+      }
+    ],
+    "themeBindings": {
+      "--bg": {
+        "light": "colors.light-bg",
+        "dark": "colors.dark-bg"
+      },
+      "--fg": {
+        "light": "colors.light-fg",
+        "dark": "colors.dark-fg"
+      },
+      "--card": {
+        "light": "colors.light-card",
+        "dark": "colors.dark-card"
+      },
+      "--field": {
+        "light": "colors.light-field",
+        "dark": "colors.dark-field"
+      },
+      "--bd": {
+        "light": "colors.light-border",
+        "dark": "colors.dark-border"
+      },
+      "--ac": {
+        "light": "colors.light-action",
+        "dark": "colors.dark-action"
+      },
+      "--mu": {
+        "light": "colors.light-muted",
+        "dark": "colors.dark-muted"
+      },
+      "--pink": {
+        "light": "colors.light-total",
+        "dark": "colors.dark-total"
+      }
+    },
+    "ambient": {
+      "light": "radial-gradient(ellipse at 95% 0%,#b3b4ff80,transparent 55%),radial-gradient(ellipse at 8% 70%,#e4bfd550,transparent 65%)",
+      "dark": "radial-gradient(ellipse at 95% 0%,#3222c080,transparent 55%),radial-gradient(ellipse at 0% 75%,#65163b60,transparent 65%)",
+      "purpose": "Page and header atmosphere over the active canvas color; fixed background attachment."
+    },
+    "focus": {
+      "value": "2px solid var(--ac)",
+      "offset": "3px"
+    },
+    "dialogBackdrop": "#080510ba",
+    "tonalRampPolicy": "Synthesized OKLCH preview ramps, dark to light at source chroma/hue; illustrative extensions, not application tokens.",
+    "source": {
+      "files": [
+        "theme.css",
+        "index.html",
+        "workspace.js",
+        "PRODUCT.md"
+      ],
+      "approvedComp": "exec-90015145-8b52-4cca-a1a3-238a5942f2b4.png",
+      "status": "Refreshed from the built, approved direction. Final visual review resolved the column-label and mobile-tab findings; neither defect is canonized as a design decision."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Violet action, bound to the selected theme.",
+      "html": "<button class=\"ds-primary\">Uložit</button>",
+      "css": ".ds-primary{font-family:system-ui,sans-serif;font-size:15px;line-height:1.5;min-height:44px;padding:0 14px;border-radius:8px;border:1px solid var(--bd,#ded5e9);cursor:pointer;font-weight:600;transition:border-color .16s,background .16s;background:var(--ac,#6843ed);border-color:var(--ac,#6843ed);color:#fff}.ds-primary:hover{border-color:var(--ac,#6843ed)}.ds-primary:focus-visible{outline:2px solid var(--ac,#6843ed);outline-offset:3px;}.ds-primary:disabled{opacity:.5;cursor:wait}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Quiet panel-colored secondary action.",
+      "html": "<button class=\"ds-secondary\">Zrušit</button>",
+      "css": ".ds-secondary{font-family:system-ui,sans-serif;font-size:15px;line-height:1.5;min-height:44px;padding:0 14px;border-radius:8px;border:1px solid var(--bd,#ded5e9);cursor:pointer;font-weight:600;transition:border-color .16s,background .16s;background:var(--card,#fff);color:var(--fg,#21172e)}.ds-secondary:hover{border-color:var(--ac,#6843ed)}.ds-secondary:focus-visible{outline:2px solid var(--ac,#6843ed);outline-offset:3px;}.ds-secondary:disabled{opacity:.5;cursor:wait}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Inset field with muted placeholder and shared focus outline.",
+      "html": "<input class=\"ds-field\" aria-label=\"Název projektu\" placeholder=\"Název projektu\">",
+      "css": ".ds-field{font-family:system-ui,sans-serif;font-size:15px;line-height:1.5;width:100%;min-width:0;min-height:48px;padding:8px 10px;border:1px solid var(--bd,#ded5e9);border-radius:7px;background:var(--field,#f8f5fc);color:var(--fg,#21172e);caret-color:var(--pink,#ab198a);transition:border-color .16s,background .16s}.ds-field::placeholder{color:var(--mu,#685a78);opacity:1}.ds-field:focus-visible{outline:2px solid var(--ac,#6843ed);outline-offset:3px;}"
+    },
+    {
+      "name": "Step Navigation",
+      "kind": "nav",
+      "description": "Current step filled violet; six compact mobile tabs share the available width.",
+      "html": "<nav class=\"ds-tabs\"><button>Projekty</button><button>Základ</button><button aria-current=\"step\">Procesy</button><button>Externí</button><button>Shrnutí</button><button>Náhled</button></nav>",
+      "css": ".ds-tabs{display:flex;gap:8px;overflow-x:auto;padding:12px 24px 20px}.ds-tabs button{font-family:system-ui,sans-serif;font-size:15px;line-height:1.5;min-height:44px;padding:0 14px;border-radius:8px;border:1px solid var(--bd,#ded5e9);cursor:pointer;font-weight:600;transition:border-color .16s,background .16s;background:transparent;border-color:transparent;color:var(--fg,#21172e);white-space:nowrap}.ds-tabs button[aria-current=\"step\"]{background:var(--ac,#6843ed);color:white}.ds-tabs button:hover{border-color:var(--ac,#6843ed)}.ds-tabs button:focus-visible{outline:2px solid var(--ac,#6843ed);outline-offset:3px;}@media(max-width:719px){.ds-tabs{gap:0;overflow:visible;padding:6px 8px 14px}.ds-tabs button{flex:1;min-width:0;padding:0 3px;font-size:12px}}"
+    },
+    {
+      "name": "Form Panel",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Opaque panel with a fine border and no box shadow.",
+      "html": "<section class=\"ds-card\"><h3>Údaje projektu</h3><p>Klient a základní nastavení nabídky.</p></section>",
+      "css": ".ds-card{font:16px/1.5 system-ui,sans-serif;background:var(--card,#fff);color:var(--fg,#21172e);border:1px solid var(--bd,#ded5e9);border-radius:12px;padding:20px;margin-bottom:18px}.ds-card h3{font-size:18px;margin:0 0 4px}.ds-card p{font-size:14px;color:var(--mu,#685a78)}@media(max-width:719px){.ds-card{padding:14px;margin-bottom:14px}}"
+    },
+    {
+      "name": "Category Header",
+      "kind": "button",
+      "description": "Flat disclosure header with muted item count and a fine divider.",
+      "html": "<button class=\"ds-category\"><b>▾ Preprodukce</b><small>4 položky</small></button>",
+      "css": ".ds-category{font-family:system-ui,sans-serif;font-size:15px;line-height:1.5;display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;min-height:44px;border:0;border-bottom:1px solid var(--bd,#ded5e9);border-radius:0;padding:0 0 14px;margin-bottom:10px;background:none;color:var(--fg,#21172e);text-align:left;cursor:pointer;font-weight:600;transition:border-color .16s,background .16s}.ds-category b{font-size:18px}.ds-category small{font-size:12px;color:var(--mu,#685a78)}.ds-category:hover{border-color:var(--ac,#6843ed)}.ds-category:focus-visible{outline:2px solid var(--ac,#6843ed);outline-offset:3px;}@media(max-width:719px){.ds-category b{font-size:16px}.ds-category small{font-size:11px}}"
+    },
+    {
+      "name": "Quotation Summary",
+      "kind": "custom",
+      "refersTo": "total",
+      "description": "Quiet summary rows end in a separated pink total with tabular numerals.",
+      "html": "<section class=\"ds-summary\"><h3>Přehled nabídky</h3><div class=\"ds-line\"><span>Procesy</span><b>12 000 Kč</b></div><div class=\"ds-line ds-total\"><span>Celkem</span><b>12 000 Kč</b></div></section>",
+      "css": ".ds-summary{font:16px/1.5 system-ui,sans-serif;background:var(--card,#fff);color:var(--fg,#21172e);border:1px solid var(--bd,#ded5e9);border-radius:12px;padding:20px}.ds-summary h3{font-size:18px;margin:0 0 20px}.ds-line{display:flex;justify-content:space-between;gap:12px;padding:8px 0;font-size:14px}.ds-line b{flex-shrink:0;font-variant-numeric:tabular-nums}.ds-total{font-size:18px;border-top:1px solid var(--bd,#ded5e9);margin-top:6px}.ds-total b{color:var(--pink,#ab198a)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Approved quotation workspace",
+    "overview": "The approved quotation workspace combines a near-black plum canvas with blue-violet and burgundy ambient gradients. Quiet, opaque form panels support concentrated editing; violet identifies primary actions and pink gives totals a clear visual role. The light theme preserves that relationship with pale plum surroundings and white panels.\n\nThe approved visual reference is `exec-90015145-8b52-4cca-a1a3-238a5942f2b4.png`. This document refreshes the existing approved direction from the built `theme.css`, base styles in `index.html`, and theme behavior in `workspace.js`. It records established behavior rather than introducing a new visual concept.",
+    "keyCharacteristics": [
+      "Plum atmosphere around quiet form panels.",
+      "Violet primary actions and pink quotation totals.",
+      "System typography, compact rows, and clearly aligned numeric columns.",
+      "A right-hand desktop summary, compact mobile editing, and white A4 output."
+    ],
+    "rules": [
+      {
+        "name": "The Ambient Canvas Rule",
+        "body": "Keep blue-violet and burgundy gradients on the page and header; form panels stay quiet and opaque.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "**Do** keep ambient gradients around opaque panels and preserve the violet-action/pink-total roles in both themes.",
+      "**Do** align process column labels with their controls and keep every mobile navigation step visible.",
+      "**Do** keep mobile rows compact while offering the full activity name in a dialog.",
+      "**Do** preserve automatic theme selection, the persistent user override, and white A4 printing."
+    ],
+    "donts": [
+      "**Don't** revive the discarded teal, navy, or multicolor category-header concepts.",
+      "**Don't** add a persistent mobile summary or transfer application gradients into printed output.",
+      "**Don't** turn illustrative reference content into a limit on the original editable fields."
+    ]
+  }
+}
