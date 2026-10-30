@@ -1,0 +1,5 @@
+supabase/
+*.md
+*.cjs
+.impeccable/
+screenshots/
