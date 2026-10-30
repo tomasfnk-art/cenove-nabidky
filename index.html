@@ -88,7 +88,7 @@ const dcz=d=>{if(!d)return'';const a=d.split('-');return a.length===3?(+a[2])+'.
 let S={projects:[],screen:'list',id:null,q:'',sort:'date'};
 try{const a=JSON.parse(localStorage.getItem('qp1')||'[]');if(Array.isArray(a))S.projects=a.filter(p=>p&&p.id&&Array.isArray(p.items)&&Array.isArray(p.ext))}catch(e){}
 function save(){try{localStorage.setItem('qp1',JSON.stringify(S.projects));if($('st'))$('st').textContent='Uloženo'}catch(e){if($('st'))$('st').textContent='Ukládání selhalo'}}
-let SUP={name:'Dominik Bednář',ico:'05728908',addr:'Příčná 633, 564 01 Žamberk',dic:'',email:'',phone:'',bank:'',terms:'V ceně jsou zahrnuta 3 kola korektur. Další korektury se účtují podle hodinové sazby.'};
+let SUP={rate:'750',sp:'6',fu:'45',rs:'40',hrate:'250',name:'Dominik Bednář',ico:'05728908',addr:'Příčná 633, 564 01 Žamberk',dic:'',email:'',phone:'',bank:'',terms:'V ceně jsou zahrnuta 3 kola korektur. Další korektury se účtují podle hodinové sazby.'};
 try{Object.assign(SUP,JSON.parse(localStorage.getItem('qp1sup')||'{}'))}catch(e){}
 const ST=['Rozpracováno','Odesláno','Přijato','Zamítnuto','Fakturováno'];
 S.projects.forEach(p=>{if(p.terms===undefined)p.terms=SUP.terms;if(!p.st)p.st=ST[0]});
@@ -140,7 +140,7 @@ function trH(p){const t=trp(p),f=(l,k)=>'<label class="f" style="flex:1 1 40%">'
 return '<div class="card"><h3>Kalkulačka dopravy</h3><div class="row">'+f('Najeto celkem, tam a zpět (km)','km')+f('Spotřeba l/100 km','sp')+f('Cena paliva Kč/l','fu')+f('Rezerva na palivo %','rs')+f('Půjčovné auta Kč','rent')+'</div><div class="ln"><span>Doprava (palivo s rezervou + půjčovné)</span><b id="trc">'+fmt(trc(p))+'</b></div><button onclick="useTr()">Použít jako Doprava</button><div class="row">'+f('Čas za volantem (h)','hr')+f('Sazba za řízení Kč/h','hrate')+'</div><div class="ln"><span>Cestovní čas</span><b id="trt">'+fmt(trt(p))+'</b></div><button onclick="useTime()">Přidat Cestovní čas do prací</button></div>'}
 function isOn(p,c){const its=p.items.filter(i=>i.cat===c);const n=its.filter(i=>num(i.v)>0&&i.name.trim()&&(i.t==='h'||i.on)).length;S.op=S.op||{};return{its,n,o:S.op[p.id+':'+c]===undefined?true:S.op[p.id+':'+c]}}
 function tg(c){const p=P();S.op=S.op||{};S.op[p.id+':'+c]=!isOn(p,c).o;render()}
-function catH(c){const p=P(),x=isOn(p,c);return '<div class="card"><button class="category-head" style="width:100%;text-align:left" onclick="tg(\''+esc(c)+'\')"><b>'+(x.o?'▾ ':'▸ ')+esc(c)+'</b> <small>'+(x.n?x.n+' vyplněno':x.its.length+' položek')+'</small></button>'+(x.o?x.its.map(row).join('')+'<button onclick="addI(\''+esc(c)+'\')">+ Přidat položku</button>':'')+'</div>'}
+function catH(c){const p=P(),x=isOn(p,c);return '<div class="card"><button class="category-head" style="width:100%;text-align:left" onclick="tg(\''+esc(c)+'\')"><b>'+(x.o?'▾ ':'▸ ')+esc(c)+'</b> <small>'+(x.n?x.n+' vyplněno':x.its.length+' položek')+'</small></button>'+(x.o?'<div class="work-labels"><span>Činnost</span><span>Typ</span><span>Hodiny / Kč</span><span>Cena</span><span></span></div>'+x.its.map(row).join('')+'<button onclick="addI(\''+esc(c)+'\')">+ Přidat položku</button>':'')+'</div>'}
 function stl(id,v){const p=S.projects.find(x=>x.id===id);if(!p)return;p.st=v;p.mod=Date.now();save();lst()}
 function sup(k,v){SUP[k]=v;save()}
 function setH(){const f=(l,k,t)=>'<label class="f">'+l+'<input '+(t||'type="text"')+' value="'+esc(SUP[k])+'" oninput="sup(\''+k+'\',this.value)"></label>';
@@ -155,8 +155,8 @@ function sum(p){return '<div class="card"><div class="row"><label class="f" styl
 const ln=(a,b,c)=>'<div class="ln '+(c||'')+'"><span>'+a+'</span><b>'+b+'</b></div>';
 function totH(c){const p=P();let h=ln('Hodiny celkem',String(Math.round(c.hours*100)/100).replace('.',',')+' h')+ln('Hodinová práce',fmt(c.hT))+ln('Pevné ceny',fmt(c.fT))+'<hr>';
 c.cats.forEach(x=>h+=ln(esc(x.name),fmt(x.sum)));h+=ln('Externí náklady',fmt(c.eS))+ln('Mezisoučet',fmt(c.base));
-if(num(p.res))h+=ln('Rezerva '+p.res+' %',fmt(c.res));if(num(p.disc))h+=ln('Sleva '+p.disc+' %','−'+fmt(c.disc));
-h+=ln('DPH '+p.vat+' %',fmt(c.vat));
+if(num(p.res))h+=ln('Rezerva '+esc(p.res)+' %',fmt(c.res));if(num(p.disc))h+=ln('Sleva '+esc(p.disc)+' %','−'+fmt(c.disc));
+h+=ln('DPH '+esc(p.vat)+' %',fmt(c.vat));
 return h+ln('Celkem vč. DPH',fmt(c.total),'t')}
 function upd(){const p=P();if(!p)return;const c=calc(p);if($('sideTotal'))$('sideTotal').innerHTML=totH(c);if($('gt'))$('gt').textContent=fmt(c.total);
 p.items.forEach(i=>{const e=$('r'+i.id);if(e)e.textContent=num(i.v)>0&&i.name.trim()&&(i.t==='h'||i.on)?fmt(i.t==='h'?num(i.v)*c.r:num(i.v)):'—'});
