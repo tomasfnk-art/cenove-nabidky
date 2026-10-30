@@ -1,6 +1,10 @@
-# Zbývá aktivovat Google přihlášení
+# Aktivace a ověření společného prostoru
 
-Hotovo: projekt Supabase cenove-nabidky v organizaci TomasFNK (Frankfurt), databázová migrace, povolený účet tomas.fnk@gmail.com, napojení Vercelu na veřejný klíč a adresu projektu. Test atomického konfliktu a zamítnutí nepovoleného uživatele proběhl v transakci a byl vrácen zpět; databáze je prázdná. Anonymní HTTP požadavek vrací 401.
+Hotovo: projekt Supabase cenove-nabidky v organizaci TomasFNK (Frankfurt), databázová migrace, povolený účet tomas.fnk@gmail.com, napojení Vercelu na veřejný klíč a adresu projektu. Google provider je aktivní. Dne 30. 10. 2026 prošlo skutečné přihlášení povoleným Google účtem, zápis nabídky na server a načtení stejných údajů ve druhé záložce.
+
+Ověřeno také: výchozí doprava 45 Kč/l, 6 l/100 km a rezerva 40 %; pro 240 km cena 907,20 Kč. Všechny kategorie procesů jsou při prvním otevření rozbalené. Klientský náhled má bílé pozadí a černý text. Klientské testy výpočtů, snapshotů, sbalení, obnovy a konfliktů prošly. Databázový test konfliktu a zamítnutí nepovoleného uživatele proběhl v transakci a byl vrácen zpět. Anonymní HTTP požadavek vrací 401.
+
+Samostatné fyzické telefony a export výsledného PDF přes systémový tisk zatím ověřeny nebyly. Test dvou záložek ověřuje serverové ukládání a načtení, nikoli chování dvou oddělených zařízení.
 
 ## Google OAuth
 
@@ -18,7 +22,7 @@ Hotovo: projekt Supabase cenove-nabidky v organizaci TomasFNK (Frankfurt), datab
 
    `https://cenove-nabidky-git-modern-shared-workspace-tomas-fnk.vercel.app/`
 
-5. Po aktivaci ověřit přihlášení povoleným Google účtem, zamítnutí jiného účtu a chování na dvou skutečných zařízeních. Teprve poté sloučit změny z GitHub PR #1 a nasadit produkci.
+5. Přihlášení povoleným účtem a sdílená data jsou ověřené. Při přidání druhého účtu jej doplňte do databázového seznamu členů a při režimu Google Testing také mezi testovací uživatele. Účet hello@dominikbednar.com zatím přidaný není.
 
 Při testu přes preview používejte přesnou povolenou adresu větve. Google klient potřebuje pouze běžnou identitu (openid, email, profile), žádný přístup k Gmailu nebo Disku.
 
