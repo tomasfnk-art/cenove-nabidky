@@ -2,18 +2,18 @@
 name: Cenové nabídky
 description: Calm quotation workspace with plum atmosphere, violet actions, and pink totals.
 colors:
-  dark-bg: "#100c18"
+  dark-bg: "#21182f"
   dark-fg: "#f5efff"
-  dark-card: "#1b1526"
-  dark-field: "#251d33"
-  dark-border: "#3b304c"
+  dark-card: "#30253f"
+  dark-field: "#3a2d4b"
+  dark-border: "#5c4a70"
   dark-action: "#7953ff"
-  dark-muted: "#bfb0d2"
+  dark-muted: "#d2c2e2"
   dark-total: "#f16adf"
-  light-bg: "#f5f2fa"
+  light-bg: "#faf6ff"
   light-fg: "#21172e"
   light-card: "#ffffff"
-  light-field: "#f8f5fc"
+  light-field: "#fcf9ff"
   light-border: "#ded5e9"
   light-action: "#6843ed"
   light-muted: "#685a78"
@@ -104,7 +104,7 @@ components:
 
 **Creative North Star: "Approved quotation workspace"**
 
-The approved quotation workspace combines a near-black plum canvas with blue-violet and burgundy ambient gradients. Quiet, opaque form panels support concentrated editing; violet identifies primary actions and pink gives totals a clear visual role. The light theme preserves that relationship with pale plum surroundings and white panels.
+The approved quotation workspace combines a lighter plum canvas with blue-violet and burgundy ambient gradients. The original near-black palette was brightened at the user's request. Quiet, opaque form panels support concentrated editing; violet identifies primary actions and pink gives totals a clear visual role. The light theme preserves that relationship with pale plum surroundings and white panels.
 
 The approved visual reference is `exec-90015145-8b52-4cca-a1a3-238a5942f2b4.png`. This document refreshes the existing approved direction from the built `theme.css`, base styles in `index.html`, and theme behavior in `workspace.js`. It records established behavior rather than introducing a new visual concept.
 
@@ -157,7 +157,7 @@ Process row labels and row controls share the same grid: flexible activity name,
 
 Project cards use an auto-fit grid with a minimum card width of (310px), constrained to available width, and card-gap spacing. Dialogs fit within (640px) or the viewport minus (32px), have a maximum height of (85vh), and scroll internally.
 
-Printed quotations use white A4 pages with (15mm) page margins. Hide application chrome, status, persistent summaries, and dialogs; remove page gradients and application spacing. Keep the preview/document layout separate from the editor's responsive grid.
+Printed quotations use white A4 pages with (12mm) page margins. Hide application chrome, status, persistent summaries, and dialogs; remove page gradients and application spacing. Keep the preview/document layout separate from the editor's responsive grid. Use one row per work phase, with active activity names in parentheses and the phase total in the price column. External costs show their individual prices in the detail line, including pending amounts. Conditions use 7.5pt italic text. Long content may flow to additional pages; never crop it or force unreadable scaling.
 
 ## Elevation & Depth
 
@@ -195,6 +195,8 @@ Category headers pair a disclosure marker and title with a muted filled-count la
 
 The right summary uses ordinary label/value rows and a separated closing total, with the total amount in pink. Larger totals use the total typography role. Printed output uses dark ink on white and suppresses the application's decorative accents.
 
+On the Processes screen, the introduction sits above both columns; the first category and desktop summary share the same top edge. Quotation status appears only on project cards, not in the project setup form. The status selector uses a subtle tint: lavender for draft, blue for sent, green for accepted, rose for rejected, and amber for invoiced. Keep the written status label so meaning does not depend on color.
+
 ### Theme selection
 
 The header selector offers device preference, dark, and light modes. `qp-theme` stores the user's override; device changes update the appearance while automatic mode is selected. Theme mappings are preserved in the sidecar so future components follow both palettes.
@@ -213,3 +215,4 @@ The header selector offers device preference, dark, and light modes. `qp-theme` 
 - **Don't** revive the discarded teal, navy, or multicolor category-header concepts.
 - **Don't** add a persistent mobile summary or transfer application gradients into printed output.
 - **Don't** turn illustrative reference content into a limit on the original editable fields.
+

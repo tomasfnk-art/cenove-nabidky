@@ -1,5 +1,5 @@
-:root{--bg:#f5f2fa;--fg:#21172e;--card:#ffffff;--field:#f8f5fc;--bd:#ded5e9;--ac:#6843ed;--mu:#685a78;--pink:#ab198a;--ambient:radial-gradient(ellipse at 95% 0%,#b3b4ff80,transparent 55%),radial-gradient(ellipse at 8% 70%,#e4bfd550,transparent 65%);color-scheme:light}
-:root[data-theme=dark]{--bg:#100c18;--fg:#f5efff;--card:#1b1526;--field:#251d33;--bd:#3b304c;--ac:#7953ff;--mu:#bfb0d2;--pink:#f16adf;--ambient:radial-gradient(ellipse at 95% 0%,#3222c080,transparent 55%),radial-gradient(ellipse at 0% 75%,#65163b60,transparent 65%);color-scheme:dark}
+:root{--bg:#faf6ff;--fg:#21172e;--card:#ffffff;--field:#fcf9ff;--bd:#ded5e9;--ac:#6843ed;--mu:#685a78;--pink:#ab198a;--ambient:radial-gradient(ellipse at 95% 0%,#c7c6ff66,transparent 55%),radial-gradient(ellipse at 8% 70%,#edcadb55,transparent 65%);color-scheme:light}
+:root[data-theme=dark]{--bg:#21182f;--fg:#f5efff;--card:#30253f;--field:#3a2d4b;--bd:#5c4a70;--ac:#7953ff;--mu:#d2c2e2;--pink:#f16adf;--ambient:radial-gradient(ellipse at 95% 0%,#5c47d866,transparent 55%),radial-gradient(ellipse at 0% 75%,#9b396055,transparent 65%);color-scheme:dark}
 body{background:var(--ambient),var(--bg);background-attachment:fixed;min-height:100vh;line-height:1.5}
 button,input,select,textarea{transition:border-color .16s,background .16s;font-size:15px}
 button{font-weight:600}button:hover{border-color:var(--ac)}button:disabled{opacity:.5;cursor:wait}
@@ -22,4 +22,17 @@ dialog{background:var(--card);color:var(--fg);border:1px solid var(--bd);border-
 .work-labels{display:grid;grid-template-columns:minmax(0,1fr) 104px 70px 100px 32px;gap:8px;color:var(--mu);font-size:11px;padding:4px 0 6px}.work-labels span:nth-child(4){text-align:right}
 @media(max-width:1000px){.work-labels{grid-template-columns:minmax(0,1fr) 85px 60px 80px 30px;gap:5px}}
 @media(max-width:719px){.tabs{display:flex;overflow:visible;padding:6px 8px 14px}.tabs button{flex:1;min-width:0;padding:0 3px;font-size:12px}.work-labels{grid-template-columns:minmax(0,1fr) 64px 48px 65px 24px;gap:4px;font-size:10px}}
-@media print{html,body{background:#fff!important;color:#111!important}header,.tabs,.summary,.status-line,.setup-note{display:none!important}.workspace{display:block}main{max-width:none;padding:0}#sheet{width:auto;min-height:0;padding:0}#sheet small,#sheet .mu{color:#555}#sheet *{color:#111}dialog{display:none}}
+.quote-status{max-width:220px;--status-tone:#9978ed;background:color-mix(in srgb,var(--status-tone) 14%,var(--field));border-color:color-mix(in srgb,var(--status-tone) 48%,var(--bd));font-weight:600}
+.status-sent{--status-tone:#5598f5}.status-accepted{--status-tone:#31ad82}.status-rejected{--status-tone:#e26886}.status-invoiced{--status-tone:#dba14c}.quote-status option{background:var(--field);color:var(--fg)}
+#sheet{padding:12mm;font-size:10pt;line-height:1.35;overflow-wrap:anywhere}
+#sheet small{color:#555}
+#sheet h1{font-size:22pt;margin-bottom:4px}#sheet p{margin:10px 0}#sheet .quote-title{font-size:12pt;font-weight:700}#sheet .quote-meta{font-size:9pt;color:#555;margin-top:3px}
+#sheet .quote-parties{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:16px 0;font-size:9pt;break-inside:avoid}
+#sheet .quote-items{margin-top:16px;table-layout:fixed}#sheet .quote-items th{text-align:left;font-size:8pt;color:#555;border-bottom:1px solid #111;padding:0 0 6px;font-weight:500}#sheet .quote-items th.r{text-align:right;width:32mm}
+#sheet .quote-items td{padding:9px 0;vertical-align:top;font-size:10pt}#sheet .quote-items td:first-child{padding-right:14px}#sheet .quote-detail{font-size:8.5pt;color:#555;margin-top:3px;line-height:1.4}
+#sheet .quote-totals{margin:14px 0 0 auto;width:70%;break-inside:avoid}#sheet .quote-totals td{padding:4px 0;font-size:9pt}#sheet .quote-totals .tot td{font-size:13pt;padding-top:8px;border-bottom:0}
+#sheet .quote-terms{font-size:7.5pt;font-style:italic;line-height:1.4;color:#555;margin-top:14px;border-top:1px solid #ddd;padding-top:8px}#sheet .quote-notes,#sheet .quote-bank{font-size:9pt}
+#sheet tr{break-inside:avoid}#sheet thead{display:table-header-group}
+@media(max-width:719px){#sheet{padding:16px}#sheet h1{font-size:19pt}#sheet .quote-parties{gap:14px}#sheet .quote-items th.r{width:25mm}#sheet .quote-totals{width:100%}}
+@media print{@page{size:A4;margin:12mm}html,body{background:#fff!important;color:#111!important}header,.tabs,.summary,.status-line,.setup-note{display:none!important}.workspace{display:block}main{max-width:none;padding:0}#sheet{width:auto;min-height:0;padding:0}#sheet .quote-parties{gap:24px}#sheet .quote-items th.r{width:32mm}#sheet .quote-totals{width:70%}#sheet small,#sheet .mu{color:#555}#sheet *{color:#111}#sheet .quote-meta,#sheet .quote-detail,#sheet .quote-terms{color:#555}dialog{display:none}}
+
