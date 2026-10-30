@@ -9,6 +9,10 @@ run('p.items[0].v="2,5";p.res="10";p.disc="5"');assert.ok(Math.abs(run('calc(p).
 // The compact client document retains every active activity and category total.
 run('globalThis.paper=mk();paper.items.forEach(i=>i.v="1");paper.ext[0].on=true;paper.ext[0].tbd=true;paper.ext[0].name="Licence <hudba>"');
 const paper=run('sheet(paper)');assert.ok(paper.includes('3 000 Kč'));assert.ok(paper.includes('5 250 Kč'));assert.ok(paper.includes('Licence &lt;hudba&gt; – bude upřesněna'));assert.ok(run('paper.items.every(i=>sheet(paper).includes(esc(i.name)))'));assert.ok(!run('basic(mk()).includes("Stav nabídky")'));
+// Old vatOn was unused. Never let it retroactively remove tax from older quotes.
+run('globalThis.tax=mk();tax.items[0].v="1";delete tax.vatEnabled;tax.vatOn=false');assert.equal(run('calc(tax).total'),907.5);
+run('tax.vatEnabled=false');assert.equal(run('calc(tax).total'),750);assert.equal(run('calc(tax).vat'),0);assert.ok(run('sheet(tax).includes("Dodavatel není plátce DPH.")'));assert.ok(!run('sheet(tax).includes("Celkem vč. DPH")'));
+run('tax.vatEnabled=true');assert.equal(run('tax.vat'),'21');assert.equal(run('calc(tax).total'),907.5);
 run('S.trash=false;rm(p.id)');assert.equal(run('isTrashVisible(p)'),false);run('S.trash=true');assert.equal(run('isTrashVisible(p)'),true);run('restoreQuote(p.id)');assert.equal(run('p.deletedAt'),undefined);
 // Verify writes during an in-flight save remain dirty, and stale revisions stop writes.
 (async()=>{run('window.demoMode=false;window.cloudUser="tomas.fnk@gmail.com";db={rpc:async()=>({data:{conflict:false,version:1}})};window.syncDirty=true');await run('flushSave()');assert.equal(run('window.syncDirty'),false);run('db={rpc:async()=>({data:{conflict:true,current:{version:2,data:{projects:[],supplier:{}}}}})};showConflict=(remote)=>{window.conflictRemote=remote};window.syncDirty=true');await run('flushSave()');assert.equal(run('window.syncConflict'),true);assert.equal(run('window.syncDirty'),true);assert.equal(run('revision'),1);console.log('PASS: transport, totals, supplier snapshots, collapse memory, trash/restore, CAS conflict handling');})().catch(e=>{console.error(e);process.exitCode=1});

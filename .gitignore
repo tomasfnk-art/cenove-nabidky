@@ -1,0 +1,11 @@
+.netlify/
+dist/
+.env
+.env.*
+NASAZENI.md
+DALSI-UPRAVY.md
+.impeccable/review/
+.impeccable/*.zip
+.impeccable/qa-server.cjs
+.impeccable/make-icons.py
+

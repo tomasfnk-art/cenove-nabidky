@@ -24,6 +24,7 @@ dialog{background:var(--card);color:var(--fg);border:1px solid var(--bd);border-
 @media(max-width:719px){.tabs{display:flex;overflow:visible;padding:6px 8px 14px}.tabs button{flex:1;min-width:0;padding:0 3px;font-size:12px}.work-labels{grid-template-columns:minmax(0,1fr) 64px 48px 65px 24px;gap:4px;font-size:10px}}
 .quote-status{max-width:220px;--status-tone:#9978ed;background:color-mix(in srgb,var(--status-tone) 14%,var(--field));border-color:color-mix(in srgb,var(--status-tone) 48%,var(--bd));font-weight:600}
 .status-sent{--status-tone:#5598f5}.status-accepted{--status-tone:#31ad82}.status-rejected{--status-tone:#e26886}.status-invoiced{--status-tone:#dba14c}.quote-status option{background:var(--field);color:var(--fg)}
+.vat-choice{margin:12px 0}.f input:disabled{opacity:.55;cursor:not-allowed}#sheet .quote-tax-note{font-size:9pt;color:#555;text-align:right}
 #sheet{padding:12mm;font-size:10pt;line-height:1.35;overflow-wrap:anywhere}
 #sheet small{color:#555}
 #sheet h1{font-size:22pt;margin-bottom:4px}#sheet p{margin:10px 0}#sheet .quote-title{font-size:12pt;font-weight:700}#sheet .quote-meta{font-size:9pt;color:#555;margin-top:3px}
